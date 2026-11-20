@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Diễn đàn theo lớp và môn học dành cho học sinh THPT." />
+    <title>Diễn đàn - Học Cùng Vui</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/dien_dan.css" />
+    <script src="../js/dien_dan.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell forum-app-shell">
+      <aside class="sidebar" aria-label="Điều hướng chính">
+        <a class="brand" href="index.html" aria-label="Học Cùng Vui - Trang chủ">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>Học Cùng Vui</span>
+        </a>
+        <nav class="main-nav" aria-label="Danh mục">
+          <a class="nav-link" href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-6v-7h-4v7H4a1 1 0 0 1-1-1z" /></svg><span>Trang chủ</span></a>
+          <a class="nav-link" href="khoa_hoc.html?grade=12"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z" /><path d="m3 12 9 5 9-5M3 16l9 5 9-5" /></svg><span>Khóa học</span></a>
+          <a class="nav-link" href="luyen_de.html?grade=12"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" /><path d="M14 3v5h5M9 13h6M9 17h6" /></svg><span>Luyện đề</span></a>
+          <a class="nav-link" href="tai_lieu.html?grade=12"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z" /><path d="M4 5.5v13A2.5 2.5 0 0 1 6.5 16H20M8 7h8M8 11h7" /></svg><span>Tài liệu</span></a>
+          <a class="nav-link is-active" href="dien_dan.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8A8.5 8.5 0 0 1 8.7 3.9a8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z" /><path d="M8 12h.01M12 12h.01M16 12h.01" /></svg><span>Diễn đàn</span></a>
+        </nav>
+        <div class="sidebar-note"><span class="note-sparkle" aria-hidden="true">✦</span><p>Mỗi ngày một chút,<br /><strong>tiến bộ thật nhiều!</strong></p></div>
+        <div class="sidebar-bottom"><span class="online-dot" aria-hidden="true"></span><span>Đồng hành cùng bạn</span></div>
+      </aside>
+
+      <div class="page-content forum-page">
+        <header class="forum-topbar">
+          <div class="forum-breadcrumb"><a href="index.html">Trang chủ</a><span>/</span><strong>Diễn đàn</strong></div>
+          <a class="forum-home-link" href="index.html"><span aria-hidden="true">←</span> Về trang chủ</a>
+        </header>
+
+        <main class="forum-main">
+          <section class="forum-heading">
+            <div>
+              <span class="forum-eyebrow">HỌC CÙNG NHAU</span>
+              <h1 id="forum-title">Diễn đàn Lớp 12</h1>
+              <p id="forum-description">Trao đổi chung, chia sẻ kinh nghiệm và hỗ trợ nhau trong học tập.</p>
+            </div>
+            <button class="forum-compose-button" type="button" id="open-compose">+ Tạo bài viết</button>
+          </section>
+
+          <section class="forum-space-filters" aria-label="Chọn không gian diễn đàn">
+            <div class="grade-space">
+              <span>Lớp</span>
+              <div role="group" aria-label="Chọn lớp">
+                <button type="button" data-grade="10">10</button>
+                <button type="button" data-grade="11">11</button>
+                <button type="button" class="is-selected" data-grade="12" aria-pressed="true">12</button>
+              </div>
+            </div>
+            <div class="subject-space">
+              <button type="button" class="is-selected" data-space="class" aria-pressed="true">Diễn đàn chung</button>
+              <button type="button" data-space="subject" data-subject="Toán">Toán</button>
+              <button type="button" data-space="subject" data-subject="Vật Lý">Vật Lý</button>
+              <button type="button" data-space="subject" data-subject="Hóa Học">Hóa Học</button>
+              <button type="button" data-space="subject" data-subject="Tiếng Anh">Tiếng Anh</button>
+              <button type="button" data-space="subject" data-subject="Ngữ Văn">Ngữ Văn</button>
+              <button type="button" data-space="subject" data-subject="Sinh Học">Sinh Học</button>
+            </div>
+          </section>
+
+          <div class="forum-layout">
+            <section class="forum-feed" aria-label="Danh sách bài viết">
+              <div class="forum-feed-tools">
+                <label class="forum-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-4-4" /></svg><span class="sr-only">Tìm bài viết</span><input id="forum-search" type="search" placeholder="Tìm trong diễn đàn..." /></label>
+                <select id="forum-sort" aria-label="Sắp xếp bài viết"><option value="latest">Mới nhất</option><option value="popular">Nhiều thích</option><option value="comment">Nhiều bình luận</option></select>
+              </div>
+              <div id="forum-post-list" aria-live="polite"></div>
+            </section>
+
+            <aside class="forum-sidebar" aria-label="Thông tin diễn đàn">
+              <section class="forum-info-card"><span class="forum-info-icon" aria-hidden="true">12</span><div><strong id="side-title">Diễn đàn Lớp 12</strong><p id="side-description">Không gian trao đổi chung</p></div></section>
+              <section class="forum-stats"><div><strong id="post-count">0</strong><span>Bài viết</span></div></section>
+              <section class="forum-guidelines"><h2>Quy tắc cộng đồng</h2><ul><li>Giữ thái độ lịch sự</li><li>Đăng đúng không gian môn học</li><li>Không spam hoặc quảng cáo</li></ul></section>
+            </aside>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <dialog class="compose-dialog" id="compose-dialog">
+      <form id="compose-form">
+        <div class="compose-head"><div><span class="forum-eyebrow">BÀI VIẾT MỚI</span><h2>Chia sẻ câu hỏi hoặc ý kiến</h2></div><button type="button" id="close-compose" aria-label="Đóng">×</button></div>
+        <label>Tiêu đề<input id="post-title" name="title" maxlength="120" required placeholder="Nhập tiêu đề..." /></label>
+        <label>Nội dung<textarea id="post-content" name="content" maxlength="1000" required rows="5" placeholder="Nội dung bạn muốn chia sẻ..."></textarea></label>
+        <div class="compose-location"><span>Đăng vào:</span><strong id="compose-location">Diễn đàn Lớp 12</strong></div>
+        <div class="compose-actions"><button type="button" class="compose-cancel" id="cancel-compose">Hủy</button><button type="submit" class="compose-submit">Đăng bài</button></div>
+      </form>
+    </dialog>
+  </body>
+</html>

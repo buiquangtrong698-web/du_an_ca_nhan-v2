@@ -1,0 +1,415 @@
+.catalog-create-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.catalog-create-button,
+.catalog-create-submit,
+.catalog-create-cancel {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 9px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.catalog-create-button,
+.catalog-create-submit {
+  background: #1768e8;
+  color: #fff;
+}
+
+.catalog-create-button:hover,
+.catalog-create-submit:hover {
+  background: #0e56c5;
+}
+
+.catalog-create-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.catalog-create-message,
+.catalog-create-form-message {
+  margin: 0;
+  color: #27835f;
+  font-size: 13px;
+}
+
+.catalog-create-form-message.is-error {
+  color: #bf4d4d;
+}
+
+.catalog-create-message.is-error {
+  color: #bf4d4d;
+}
+
+.catalog-delete-button {
+  align-self: flex-end;
+  min-height: 34px;
+  margin-top: 12px;
+  padding: 0 12px;
+  border: 1px solid #e8c1c1;
+  border-radius: 8px;
+  background: #fff7f7;
+  color: #b33a3a;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.catalog-delete-button:hover {
+  border-color: #d99898;
+  background: #ffeded;
+}
+
+.catalog-delete-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.catalog-create-dialog {
+  width: min(620px, calc(100vw - 32px));
+  max-height: min(90vh, 760px);
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid #e1e6ef;
+  border-radius: 14px;
+  background: #fff;
+  color: #242a3d;
+  box-shadow: 0 24px 70px rgb(22 32 54 / 24%);
+}
+
+.catalog-create-dialog::backdrop {
+  background: rgb(25 34 52 / 43%);
+  backdrop-filter: blur(2px);
+}
+
+.catalog-create-dialog-header {
+  display: flex;
+  min-height: 70px;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 22px;
+  border-bottom: 1px solid #e7eaf0;
+}
+
+.catalog-create-dialog-icon {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 8px;
+  background: #eaf1ff;
+  color: #1768e8;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.catalog-create-dialog-header h2 {
+  margin: 0;
+  color: #20283a;
+  font-size: 20px;
+  font-weight: 750;
+}
+
+.catalog-create-dialog-close {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 auto;
+  place-items: center;
+  margin-left: auto;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #485166;
+  font-size: 27px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.catalog-create-dialog-close:hover {
+  background: #f0f3f8;
+}
+
+.catalog-create-form {
+  display: grid;
+  gap: 15px;
+  margin: 0;
+  padding: 20px 24px 24px;
+  border: 0;
+  background: #fff;
+}
+
+.catalog-create-form label {
+  display: grid;
+  gap: 7px;
+  color: #30384c;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.catalog-create-form input,
+.catalog-create-form select,
+.catalog-create-form textarea {
+  width: 100%;
+  min-height: 43px;
+  padding: 10px 12px;
+  border: 1px solid #d6ddeb;
+  border-radius: 8px;
+  background: #fff;
+  color: #273149;
+  font: inherit;
+  font-weight: 400;
+}
+
+.catalog-create-form textarea {
+  min-height: 76px;
+  resize: vertical;
+}
+
+.catalog-create-form input:focus,
+.catalog-create-form select:focus,
+.catalog-create-form textarea:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 1px;
+}
+
+.catalog-create-form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.catalog-create-hint {
+  color: #858b9b;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.catalog-create-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 9px;
+  padding-top: 2px;
+}
+
+.catalog-create-cancel {
+  border: 1px solid #cbd4e4;
+  background: #fff;
+  color: #364159;
+}
+
+.catalog-file-download {
+  flex-basis: 100%;
+  overflow-wrap: anywhere;
+  color: #1768e8;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.catalog-file-download:hover {
+  text-decoration: underline;
+}
+
+.catalog-file-open-button {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  gap: 7px;
+  align-self: flex-start;
+  margin: 0 0 12px;
+  padding: 0 12px;
+  border: 1px solid #cbdaf2;
+  border-radius: 8px;
+  background: #1768e8;
+  color: #fff;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.catalog-file-open-button::before {
+  content: "⛶";
+  font-size: 16px;
+}
+
+.catalog-file-open-button:hover {
+  transform: translateY(-1px);
+  background: #0e56c5;
+}
+
+.catalog-file-open-button:focus-visible,
+.catalog-pdf-viewer-close:focus-visible {
+  outline: 2px solid #1768e8;
+  outline-offset: 2px;
+}
+
+.catalog-file-open-button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.resource-preview-note.is-error {
+  color: #b42318;
+}
+
+.catalog-pdf-viewer-dialog {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  max-width: none;
+  max-height: none;
+  grid-template-rows: 68px minmax(0, 1fr);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background: #e7ebf2;
+  color: #20283a;
+}
+
+.catalog-pdf-viewer-dialog:not([open]) {
+  display: none;
+}
+
+.catalog-pdf-viewer-dialog[open] {
+  display: grid;
+}
+
+@supports (height: 100dvh) {
+  .catalog-pdf-viewer-dialog {
+    height: 100dvh;
+  }
+}
+
+.catalog-pdf-viewer-dialog::backdrop {
+  background: rgb(20 30 50 / 72%);
+}
+
+.catalog-pdf-viewer-header {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 13px;
+  padding: 9px 18px;
+  border-bottom: 1px solid #dfe4ec;
+  background: #fff;
+}
+
+.catalog-pdf-viewer-badge {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 10px;
+  background: #eaf1ff;
+  color: #1768e8;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.catalog-pdf-viewer-identity {
+  min-width: 0;
+}
+
+.catalog-pdf-viewer-title {
+  overflow: hidden;
+  margin: 0;
+  color: #20283a;
+  font-size: 15px;
+  font-weight: 750;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.catalog-pdf-viewer-filename {
+  overflow: hidden;
+  margin: 3px 0 0;
+  color: #788196;
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.catalog-pdf-viewer-close {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+  place-items: center;
+  margin-left: auto;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #39445b;
+  font: inherit;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.catalog-pdf-viewer-close:hover {
+  background: #eef2f8;
+}
+
+.catalog-pdf-viewer-frame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #252a33;
+}
+
+@media (max-width: 560px) {
+  .catalog-create-actions {
+    flex-wrap: wrap;
+  }
+
+  .catalog-create-dialog-header {
+    min-height: 62px;
+    padding: 12px 16px;
+  }
+
+  .catalog-create-form {
+    gap: 13px;
+    padding: 17px 16px 19px;
+  }
+
+  .catalog-create-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-pdf-viewer-dialog {
+    grid-template-rows: 60px minmax(0, 1fr);
+  }
+
+  .catalog-pdf-viewer-header {
+    gap: 9px;
+    padding: 8px 10px;
+  }
+
+  .catalog-pdf-viewer-badge {
+    width: 36px;
+    height: 36px;
+  }
+
+  .catalog-pdf-viewer-title {
+    font-size: 13px;
+  }
+}

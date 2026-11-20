@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Khám phá khóa học theo lớp và môn học dành cho học sinh THPT."
+    />
+    <title>Khóa học — Học Cùng Vui</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/khoa_hoc.css?v=2" />
+    <link rel="stylesheet" href="../css/catalog_admin.css?v=2" />
+    <script src="../js/khoa_hoc.js?v=2" defer></script>
+  </head>
+  <body>
+    <div class="app-shell catalog-app-shell">
+      <aside class="sidebar" aria-label="Điều hướng chính">
+        <a class="brand" href="index.html" aria-label="Học Cùng Vui — Trang chủ">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>Học Cùng Vui</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Danh mục">
+          <a class="nav-link" href="index.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-6v-7h-4v7H4a1 1 0 0 1-1-1z" /></svg>
+            <span>Trang chủ</span>
+          </a>
+          <a class="nav-link is-active" href="khoa_hoc.html" aria-current="page">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z" /><path d="m3 12 9 5 9-5M3 16l9 5 9-5" /></svg>
+            <span>Khóa học</span>
+          </a>
+          <a class="nav-link" href="luyen_de.html?grade=12" data-practice-page-link>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" /><path d="M14 3v5h5M9 13h6M9 17h6" /></svg>
+            <span>Luyện đề</span>
+          </a>
+          <a class="nav-link" href="tai_lieu.html?grade=10" data-resource-page-link>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z" /><path d="M4 5.5v13A2.5 2.5 0 0 1 6.5 16H20M8 7h8M8 11h7" /></svg>
+            <span>Tài liệu</span>
+          </a>
+          <a class="nav-link" href="dien_dan.html?grade=10&scope=class">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8A8.5 8.5 0 0 1 8.7 3.9a8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z" /><path d="M8 12h.01M12 12h.01M16 12h.01" /></svg>
+            <span>Diễn đàn</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-note">
+          <span class="note-sparkle" aria-hidden="true">✦</span>
+          <p>Mỗi ngày một chút,<br /><strong>tiến bộ thật nhiều!</strong></p>
+        </div>
+        <div class="sidebar-bottom">
+          <span class="online-dot" aria-hidden="true"></span>
+          <span>Đồng hành cùng bạn</span>
+        </div>
+      </aside>
+
+      <div class="page-content catalog-page">
+        <header class="catalog-topbar">
+          <div class="catalog-breadcrumb"><a href="index.html">Trang chủ</a><span aria-hidden="true">/</span><strong>Khóa học</strong></div>
+          <a class="catalog-home-link" href="index.html">
+            <span aria-hidden="true">←</span> Về trang chủ
+          </a>
+        </header>
+
+        <main class="catalog-main">
+        <section class="catalog-intro" aria-labelledby="catalog-title">
+          <span class="catalog-eyebrow">THƯ VIỆN HỌC TẬP</span>
+          <h1 id="catalog-title">Khóa học theo lớp &amp; môn học</h1>
+          <p>Chọn khối lớp và môn học để tìm lộ trình phù hợp với bạn.</p>
+        </section>
+
+        <div class="catalog-create-actions">
+          <button class="catalog-create-button" id="add-course-button" type="button">+ Thêm khóa học</button>
+          <p class="catalog-create-message" id="course-page-message" role="status" aria-live="polite"></p>
+        </div>
+        <dialog class="catalog-create-dialog" id="course-dialog" aria-labelledby="course-dialog-title">
+          <div class="catalog-create-dialog-header">
+            <span class="catalog-create-dialog-icon" aria-hidden="true">▤</span>
+            <h2 id="course-dialog-title">Thêm khóa học</h2>
+            <button class="catalog-create-dialog-close" id="close-course-dialog" type="button" aria-label="Đóng">×</button>
+          </div>
+          <form class="catalog-create-form" id="course-form">
+            <label>Tên khóa học<input name="title" maxlength="160" required /></label>
+            <div class="catalog-create-form-row">
+              <label>Lớp
+                <select name="grade" required>
+                  <option value="10">Lớp 10</option>
+                  <option value="11">Lớp 11</option>
+                  <option value="12">Lớp 12</option>
+                </select>
+              </label>
+              <label>Môn học
+                <select name="subject" required>
+                  <option>Toán</option>
+                  <option>Vật Lý</option>
+                  <option>Hóa Học</option>
+                  <option>Tiếng Anh</option>
+                  <option>Ngữ Văn</option>
+                  <option>Sinh Học</option>
+                </select>
+              </label>
+            </div>
+            <label>Mô tả<textarea name="description" rows="3" maxlength="1000" required></textarea></label>
+            <div class="catalog-create-form-row">
+              <label>Số bài giảng<input name="lessons" type="number" min="1" max="500" required /></label>
+              <label>Cấp độ<input name="level" maxlength="80" placeholder="Ví dụ: Cơ bản" required /></label>
+            </div>
+            <label>Chủ đề <span class="catalog-create-hint">Mỗi dòng một chủ đề</span>
+              <textarea name="topics" rows="3" maxlength="1600"></textarea>
+            </label>
+            <p class="catalog-create-form-message" id="course-form-message" role="status" aria-live="polite"></p>
+            <div class="catalog-create-form-actions">
+              <button class="catalog-create-cancel" id="cancel-course-button" type="button">Hủy</button>
+              <button class="catalog-create-submit" type="submit">Lưu khóa học</button>
+            </div>
+          </form>
+        </dialog>
+
+        <section class="catalog-filters" aria-label="Lọc khóa học">
+          <div class="filter-group">
+            <h2>Chọn lớp</h2>
+            <div class="filter-options" role="group" aria-label="Chọn khối lớp">
+              <button type="button" class="filter-chip is-selected" data-grade="10" aria-pressed="true">Lớp 10</button>
+              <button type="button" class="filter-chip" data-grade="11" aria-pressed="false">Lớp 11</button>
+              <button type="button" class="filter-chip" data-grade="12" aria-pressed="false">Lớp 12</button>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <h2>Chọn môn học</h2>
+            <div class="filter-options subject-options" role="group" aria-label="Lọc theo môn học">
+              <button type="button" class="filter-chip is-selected" data-subject="all" aria-pressed="true">Tất cả môn</button>
+              <button type="button" class="filter-chip" data-subject="Toán" aria-pressed="false">Toán</button>
+              <button type="button" class="filter-chip" data-subject="Vật Lý" aria-pressed="false">Vật Lý</button>
+              <button type="button" class="filter-chip" data-subject="Hóa Học" aria-pressed="false">Hóa Học</button>
+              <button type="button" class="filter-chip" data-subject="Tiếng Anh" aria-pressed="false">Tiếng Anh</button>
+              <button type="button" class="filter-chip" data-subject="Ngữ Văn" aria-pressed="false">Ngữ Văn</button>
+              <button type="button" class="filter-chip" data-subject="Sinh Học" aria-pressed="false">Sinh Học</button>
+            </div>
+          </div>
+
+          <label class="catalog-search">
+            <span class="sr-only">Tìm khóa học</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-4-4" /></svg>
+            <input id="course-search" type="search" placeholder="Tìm tên khóa học..." />
+          </label>
+        </section>
+
+        <section class="catalog-results" aria-labelledby="results-title">
+          <div class="catalog-results-heading">
+            <div>
+              <span class="catalog-eyebrow">LỘ TRÌNH HỌC TẬP</span>
+              <h2 id="results-title">Khóa học lớp 10</h2>
+            </div>
+            <p id="course-count" aria-live="polite">6 khóa học</p>
+          </div>
+          <div class="catalog-course-grid" id="course-list" aria-live="polite"></div>
+          <p class="catalog-empty" id="empty-state" hidden>Chưa tìm thấy khóa học phù hợp. Hãy thử chọn môn học hoặc từ khóa khác.</p>
+        </section>
+
+        <footer class="catalog-footer">
+          <span>© 2026 Học Cùng Vui</span>
+          <a href="index.html">Quay lại trang chủ <span aria-hidden="true">→</span></a>
+        </footer>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tạo tài khoản Học Cùng Vui miễn phí." />
+    <title>Đăng ký - Học Cùng Vui</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/auth-base.css" />
+    <link rel="stylesheet" href="../css/dang_ky.css" />
+    <script src="../js/tai_khoan.js" defer></script>
+  </head>
+  <body class="auth-register">
+    <main class="auth-layout">
+      <section class="auth-showcase" aria-label="Giới thiệu Học Cùng Vui">
+        <a class="brand auth-brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>Học Cùng Vui</span>
+        </a>
+        <div class="showcase-copy">
+          <span class="showcase-kicker">BẮT ĐẦU HÀNH TRÌNH MỚI</span>
+          <h1>Học cùng nhau,<br /><em>tiến xa hơn!</em></h1>
+          <p>Tạo tài khoản miễn phí để kết nối với cộng đồng học tập và cùng nhau chinh phục mục tiêu.</p>
+        </div>
+        <div class="showcase-art" aria-hidden="true">
+          <span class="art-sun"></span><span class="art-orbit orbit-a"></span><span class="art-orbit orbit-b"></span>
+          <span class="art-star star-a">✦</span><span class="art-star star-b">✳</span>
+          <span class="art-book"><i></i><i></i></span>
+        </div>
+        <span class="showcase-footer">Không ngừng khám phá, tự tin trưởng thành <span aria-hidden="true">✨</span></span>
+      </section>
+
+      <section class="auth-panel">
+        <a class="mobile-brand" href="index.html"><span class="brand-mark" aria-hidden="true">✦</span> Học Cùng Vui</a>
+        <a class="auth-back" href="index.html">← <span>Trang chủ</span></a>
+        <div class="auth-form-wrap">
+          <header class="auth-heading">
+            <span class="auth-eyebrow">TẠO KHÔNG GIAN HỌC TẬP CỦA BẠN</span>
+            <h2>Tạo tài khoản</h2>
+            <p>Chỉ mất một phút để bắt đầu.</p>
+          </header>
+          <p class="auth-message" id="auth-message" role="status" aria-live="polite"></p>
+          <section class="auth-current" id="current-account" hidden>
+            <strong id="current-name"></strong>
+            <span id="current-role"></span>
+            <button type="button" id="logout-button">Đăng xuất</button>
+          </section>
+          <form class="auth-card" id="register-form">
+            <label>Tên tài khoản <span class="auth-hint">3-32 ký tự, không dấu</span>
+              <span class="input-wrap"><span aria-hidden="true">@</span><input name="username" type="text" autocomplete="username" minlength="3" maxlength="32" placeholder="vd: minh_anh12" required /></span>
+            </label>
+            <label>Tên hiển thị
+              <span class="input-wrap"><span aria-hidden="true">♙</span><input name="display_name" type="text" autocomplete="name" minlength="2" maxlength="80" placeholder="Tên của bạn" required /></span>
+            </label>
+            <label>Mật khẩu <span class="auth-hint">Ít nhất 8 ký tự, không dấu</span>
+              <span class="input-wrap"><span aria-hidden="true">♙</span><input name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" placeholder="Tạo mật khẩu an toàn" required /></span>
+            </label>
+            <button class="auth-submit" type="submit">Tạo tài khoản <span aria-hidden="true">→</span></button>
+            <p class="auth-note">Tài khoản mới mặc định có quyền user.</p>
+          </form>
+          <p class="auth-switch">Đã có tài khoản? <a href="tai_khoan.html">Đăng nhập</a></p>
+          <p class="auth-legal">Thông tin tài khoản được bảo vệ và chỉ dùng cho trải nghiệm học tập của bạn.</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

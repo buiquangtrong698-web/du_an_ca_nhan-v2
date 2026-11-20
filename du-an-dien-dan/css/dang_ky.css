@@ -1,0 +1,14 @@
+.auth-register .auth-showcase{background:linear-gradient(145deg,#283764 0%,#4c5797 50%,#8472b8 100%)}
+.auth-register .showcase-kicker{color:#d8d1ff}
+.auth-register .showcase-copy h1 em{color:#d9d1ff}
+.auth-register .art-sun{background:linear-gradient(145deg,#ffd995,#ef9eaa)}
+.auth-register .art-book i{background:linear-gradient(150deg,#fff8ff,#e2d9ff)}
+.auth-register .art-book i+i{background:linear-gradient(210deg,#f5e7ff,#cfc0f2)}
+.auth-register .input-wrap:focus-within{border-color:#9585d2;box-shadow:0 0 0 4px rgb(139 120 202 / 13%)}
+.auth-register .auth-submit{background:linear-gradient(100deg,#5959a5,#9274c1);box-shadow:0 8px 18px rgb(106 91 175 / 20%)}
+.auth-register .auth-submit:hover{box-shadow:0 11px 22px rgb(106 91 175 / 28%)}
+.auth-register .auth-switch a{color:#685ca8}
+.auth-register .auth-eyebrow{color:#7165b0}
+.auth-register .auth-current{border-color:#e4ddf7;background:#f7f4ff}
+.auth-register .auth-current strong{color:#665596}
+.auth-register .auth-current button{background:#6459a3}
